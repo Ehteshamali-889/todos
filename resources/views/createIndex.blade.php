@@ -11,7 +11,7 @@
             </div>
             <a href="{{ route('todo.home') }}" class="btn btn-primary">Back</a>
         </div>
-        <!-- {{ print_r($errors->all()) }} -->
+        
         <div class="card">
             <div class="card-body">
                 <form action="{{ route('todo.createTodo') }}" method="post">
@@ -34,15 +34,7 @@
                             @enderror
                         </div>
                     </div>
-                    {{-- <div class="mb-3">
-                        <label for="duedate" class="form-label">Due Date</label>
-                        <input type="date" class="form-control" id="duedate" name="duedate">
-                        <div class='text-danger'>
-                            @error('duedate')
-                                {{ $message }}
-                            @enderror
-                        </div>
-                    </div> --}}
+                    
                     <div class="mb-3">
                         <label for="status" class="form-label">Status</label>
                         <select class="form-select" name="status">

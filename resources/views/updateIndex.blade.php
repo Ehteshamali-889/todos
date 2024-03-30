@@ -9,7 +9,7 @@
             <div class="h2">
                 Update Todo
             </div>
-            <a href="" class="btn btn-primary">Back</a>
+            <a href="{{ route('todo.home') }}" class="btn btn-primary">Back</a>
         </div>
 
         <div class="card">
@@ -26,13 +26,7 @@
                         <input type="text" class="form-control" id="work" name="work"
                             value="{{ $todo->work }}">
                     </div>
-                    {{-- <div class="mb-3">
-                        <label for="duedate" class="form-label">Due Date</label>
-                        <input type="date" class="form-control" id="duedate"
-                        name="duedate"
-                        value="{{$todo->duedate}}"
-                        >
-                    </div> --}}
+                    
                     <div class="mb-3">
                         <label for="status" class="form-label">Status</label>
                         <select class="form-select" name="status">
@@ -40,11 +34,7 @@
                             <option value="Open" {{ $todo->status === "Open" ? "selected" : "" }}>Open</option>
                             <option value="Close" {{ $todo->status === "Close" ? "selected" : "" }}>Close</option>
                         </select>                        
-                        <div class='text-danger'>
-                            @error('status')
-                                {{ $message }}
-                            @enderror
-                        </div>
+                        
                     </div>
                     <input type="hidden" name="id" value="{{ $todo->id }}">
                     <button type="submit" class="btn btn-primary">Update Todo</button>

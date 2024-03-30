@@ -13,7 +13,7 @@ class todoController extends Controller
         return view("allToDoIndex")->with($data);
     }
     function createTodo(Request $request){
-        // print_r($request->all());
+        
         $request->validate([
             'name' => 'required',
             'work' => 'required',
